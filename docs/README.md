@@ -29,6 +29,16 @@ This system provides a complete perception and control pipeline for autonomous c
 [Each box labeled with stain type, confidence score, and recommended action]
 [Overall contamination ratio: 7.2% of surface area]
 ```
+## System Pipeline
+
+```mermaid
+flowchart TD
+    A[Input Glass Image] --> B[YOLOv8 Stain Detection]
+    B --> C[Stain Classification]
+    C --> D[Contamination Analysis]
+    D --> E[Cleaning Strategy Generator]
+    E --> F[Robot Control Parameters]
+```
 
 ## Features
 
@@ -58,19 +68,6 @@ The system generates cleaning recommendations based on:
 |Detection Confidence|60%|Higher confidence = more aggressive cleaning|
 |Contamination Area|40%|Larger stains require more intensive treatment|
 |Location Priority|Auto|Priority sorting by severity|
-
-## System Pipeline
-Image Input
-   ↓
-YOLOv8 Detection
-   ↓
-Stain Classification
-   ↓
-Contamination Analysis
-   ↓
-Cleaning Strategy Planner
-   ↓
-Robot Execution
 
 #### Cleaning Strategies
 
@@ -518,29 +515,4 @@ pytest tests/ --cov=.
 ## License
 
 MIT License - See LICENSE file for details
-
-## Contributing
-
-Contributions are welcome. Please:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Make your changes and add tests
-4. Run test suite: `pytest tests/`
-5. Submit pull request with detailed description
-
-## Support
-
-For issues, questions, or suggestions:
-
-- GitHub Issues: https://github.com/yourusername/glass-stain-detector/issues
-- Email: support@example.com
-- Documentation: See QUICKSTART.md for common tasks
-
----
-
-**Project Status**: Production Ready  
-**Version**: 1.0.0  
-**Last Updated**: March 2026  
-**Maintained By**: Glass Stain Detection Team
 
