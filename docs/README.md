@@ -15,35 +15,14 @@ This system provides a complete perception and control pipeline for autonomous c
 
 ### Before and After Detection Processing
 
-#### Example 1: Rain Streaks Detection
+
+Multiple Stain Types
 
 **Input Image:**
-![alt text](image-1.png)
+
 
 **Detection Output:**
-![alt text](image.png)
 
-**Visualized Output:**
-```
-[Original image with red bounding boxes drawn around detected rain streaks]
-[Labels showing "rain_streaks 0.92" above each detection]
-```
-
-#### Example 2: Multiple Stain Types
-
-**Input Image:**
-```
-[Glass surface with mixed contamination]
-Image size: 1024x768 pixels
-```
-
-**Detection Output:**
-```
-Three detections identified:
-1. Bird droppings - Confidence: 0.85 - Area: 3,600px - HIGH_INTENSITY
-2. Dust spots - Confidence: 0.72 - Area: 2,500px - MEDIUM
-3. Water spots - Confidence: 0.68 - Area: 1,600px - QUICK_PASS
-```
 
 **Visualized Output:**
 ```
