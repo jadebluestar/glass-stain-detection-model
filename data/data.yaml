@@ -1,0 +1,23 @@
+# Glass Stain Detection Dataset Configuration
+# YOLO Format Dataset
+
+path: /path/to/dataset  # dataset root
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes
+nc: 10
+
+# Class names
+names:
+  0: rain_streaks
+  1: bird_droppings
+  2: dust_spots
+  3: water_spots
+  4: grime_buildup
+  5: fingerprints
+  6: insect_remains
+  7: pollen_residue
+  8: construction_debris
+  9: salt_stains
