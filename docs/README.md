@@ -31,36 +31,37 @@ This system provides a complete perception and control pipeline for autonomous c
 ```
 ## System Pipeline
 
-+----------------------+
-| Input Glass Image |
-+----------+-----------+
-|
-v
-+----------------------+
-| YOLOv8 Stain Detector|
-+----------+-----------+
-|
-v
-+----------------------+
-| Stain Classification |
-+----------+-----------+
-|
-v
-+----------------------+
-| Contamination |
-| Analysis |
-+----------+-----------+
-|
-v
-+----------------------+
-| Cleaning Strategy |
-| Generator |
-+----------+-----------+
-|
-v
-+----------------------+
-| Robotic Controller |
-+----------------------+
+```
++-----------------------+
+|   Input Glass Image   |
++-----------+-----------+
+            |
+            v
++-----------------------+
+| YOLOv8 Stain Detector |
++-----------+-----------+
+            |
+            v
++-----------------------+
+| Stain Classification  |
++-----------+-----------+
+            |
+            v
++-----------------------+
+| Contamination Analysis|
++-----------+-----------+
+            |
+            v
++-----------------------+
+| Cleaning Strategy     |
+| Generator             |
++-----------+-----------+
+            |
+            v
++-----------------------+
+| Robotic Controller    |
++-----------------------+
+```
 
 ## Features
 
