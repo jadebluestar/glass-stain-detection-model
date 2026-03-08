@@ -120,89 +120,10 @@ python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r requirements.
 ```
 
-## Quick Demo (No ML Libraries Needed!)
 
-See the system in action immediately:
-
-```bash
-python3 demo_light.py
-```
-
-### Demo Output Example
-
-```
-================================================================================
-GLASS STAIN DETECTOR - DEMO RESULTS
-================================================================================
-
-DETECTION RESULTS FOR TEST IMAGES
-================================================================================
-
-t1.jpg:
-  Status: MODERATE_CONTAMINATION
-  Contamination: 12.5%
-  Stains Found: 2
-  Details:
-    1. Water Spots
-       Confidence: 0.87
-       Area: 234 pixels
-    2. Dust Spots
-       Confidence: 0.72
-       Area: 156 pixels
-
-t2.png:
-  Status: HIGH_CONTAMINATION
-  Contamination: 28.3%
-  Stains Found: 3
-  Details:
-    1. Rain Streaks
-       Confidence: 0.91
-       Area: 512 pixels
-    2. Grime Buildup
-       Confidence: 0.78
-       Area: 340 pixels
-    3. Water Spots
-       Confidence: 0.65
-       Area: 200 pixels
-
-t4.jpg:
-  Status: HIGH_CONTAMINATION
-  Contamination: 32.1%
-  Stains Found: 2
-  Details:
-    1. Bird Droppings
-       Confidence: 0.95
-       Area: 450 pixels
-    2. Construction Debris
-       Confidence: 0.68
-       Area: 267 pixels
-
-================================================================================
-SUMMARY
-================================================================================
-
-Total Images Analyzed: 5
-Total Stains Detected: 10
-Average Contamination: 18.4%
-
-================================================================================
-CLEANING RECOMMENDATIONS
-================================================================================
-
-HIGH_INTENSITY CLEANING:
-  • t4.jpg (32.1% contamination)
-  • t2.png (28.3% contamination)
-
-MEDIUM CLEANING:
-  • t5.jpg (13.8% contamination)
-  • t1.jpg (12.5% contamination)
-
-QUICK_PASS CLEANING:
-  • t3.jpg (5.2% contamination)
-```
 
 **Run the full ML pipeline with real YOLOv8 model:**
 ```bash
@@ -334,46 +255,7 @@ Training outputs:
 - Training metrics: `runs/detect/glass_stain_detector/results.csv`
 - Validation curves: `runs/detect/glass_stain_detector/results.png`
 
-## Project Structure
 
-```
-glass-stain-detector/
-├── Core Modules
-│   ├── stain_classifier.py       (ML detection pipeline)
-│   ├── controller_demo.py        (Action planning logic)
-│   ├── perception_demo.py        (End-to-end orchestration)
-│   ├── config.py                 (Configuration management)
-│   ├── exceptions.py             (Custom exceptions)
-│   └── dataset.py                (Dataset utilities)
-├── Testing
-│   ├── tests/
-│   │   ├── __init__.py
-│   │   ├── conftest.py          (Pytest configuration)
-│   │   ├── test_stain_classifier.py
-│   │   ├── test_controller.py
-│   │   ├── test_perception_pipeline.py
-│   │   └── test_exceptions.py
-│   └── pytest.ini                (Test configuration)
-├── Training
-│   ├── train.py                  (Model training)
-│   ├── data/
-│   │   ├── data.yaml             (Dataset config)
-│   │   └── test_images/          (Sample images)
-├── Output
-│   ├── results/                  (Detection outputs)
-│   ├── models/                   (Model weights)
-│   └── logs/                     (Training/inference logs)
-├── Documentation
-│   ├── README.md                 (This file)
-│   ├── QUICKSTART.md             (Getting started)
-│   ├── CHANGELOG.md              (Version history)
-│   ├── CURSOR_PROMPT.md          (AI assistance guide)
-│   └── PROJECT_SUMMARY.md        (Project overview)
-├── Configuration
-│   ├── requirements.txt          (Python dependencies)
-│   ├── .gitignore                (Git configuration)
-│   └── setup.py                  (Package setup)
-```
 
 ## Output Formats
 
