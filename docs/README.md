@@ -1,5 +1,10 @@
 # Glass Stain Detection System
 
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![YOLOv8](https://img.shields.io/badge/Model-YOLOv8-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Status-Production_Ready-success)
+
 A professional computer vision system for detecting, classifying, and planning automated cleaning responses for glass surface contamination using YOLOv8.
 
 ## Overview
@@ -13,16 +18,10 @@ This system provides a complete perception and control pipeline for autonomous c
 
 ## Detection Examples
 
-### Before and After Detection Processing
-
-
-Multiple Stain Types
-
-**Input Image:**
-
-
-**Detection Output:**
-
+### Multiple Stain Types
+| Before | After Detection |
+|------|------|
+| ![Before](https://raw.githubusercontent.com/jadebluestar/glass-stain-detection-model/main/data/test_images/t5.jpg) | ![After](https://raw.githubusercontent.com/jadebluestar/glass-stain-detection-model/main/results/t5_output.jpg) |
 
 **Visualized Output:**
 ```
@@ -59,6 +58,19 @@ The system generates cleaning recommendations based on:
 |Detection Confidence|60%|Higher confidence = more aggressive cleaning|
 |Contamination Area|40%|Larger stains require more intensive treatment|
 |Location Priority|Auto|Priority sorting by severity|
+
+## System Pipeline
+Image Input
+   ↓
+YOLOv8 Detection
+   ↓
+Stain Classification
+   ↓
+Contamination Analysis
+   ↓
+Cleaning Strategy Planner
+   ↓
+Robot Execution
 
 #### Cleaning Strategies
 
