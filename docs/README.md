@@ -31,14 +31,36 @@ This system provides a complete perception and control pipeline for autonomous c
 ```
 ## System Pipeline
 
-```mermaid
-flowchart TD
-    A[Input Glass Image] --> B[YOLOv8 Stain Detection]
-    B --> C[Stain Classification]
-    C --> D[Contamination Analysis]
-    D --> E[Cleaning Strategy Generator]
-    E --> F[Robot Control Parameters]
-```
++----------------------+
+| Input Glass Image |
++----------+-----------+
+|
+v
++----------------------+
+| YOLOv8 Stain Detector|
++----------+-----------+
+|
+v
++----------------------+
+| Stain Classification |
++----------+-----------+
+|
+v
++----------------------+
+| Contamination |
+| Analysis |
++----------+-----------+
+|
+v
++----------------------+
+| Cleaning Strategy |
+| Generator |
++----------+-----------+
+|
+v
++----------------------+
+| Robotic Controller |
++----------------------+
 
 ## Features
 
